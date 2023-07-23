@@ -8,7 +8,7 @@ variable "network_name" {
     default = "k8s-vpc"
 }
 variable "auto_create_subnetworks" {
-    default = true
+    default = false
 }
 # variable "routing_mode" {
 #     default = "GLOBAL"
