@@ -1,2 +1,2 @@
-./environment/test/.terraform
-./environment/test/.terraform.lock.hcl
+gke-cloud-deployment/environment/test/.terraform/
+gke-cloud-deployment/environment/test/.terraform.lock.hcl
