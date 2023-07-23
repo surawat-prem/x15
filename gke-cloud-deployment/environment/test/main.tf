@@ -11,10 +11,22 @@ provider "google" {
   # Configuration options
 }
 
-resource "google_compute_network" "vpc_network" {
-  project = var.project
-  name = "test-vpc-network"
-  auto_create_subnetworks = true
+module "network" {
+  source  = "terraform-google-modules/network/google"
+  version = "7.1.0"
+
+  ## VPC
+  network_name  = var.network_name
+  auto_create_subnetworks = var.auto_create_subnetworks
+  # routing_mode  = var.routing_mode
+  project_id  = var.project_id
+  shared_vpc_host = var.shared_vpc_host
+  delete_default_internet_gateway_routes  = var.delete_default_internet_gateway_routes
+  mtu = var.mtu
+
+  ## SUBNET
+  subnets = var.subnets
+  # secondary_ranges  = var.secondary_ranges
 }
 
 # module "kubernetes-engine" {
