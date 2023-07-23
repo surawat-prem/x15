@@ -1,0 +1,2 @@
+./environment/test/.terraform
+./environment/test/.terraform.lock.hcl
