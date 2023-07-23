@@ -29,7 +29,7 @@ variable "subnets" {
         {
             subnet_name = "subnet-k8s"
             subnet_ip = "10.10.10.0/24"
-            subnet_region = "asia-southeast1-a"
+            subnet_region = "asia-southeast1"
         }
     ]
 }
