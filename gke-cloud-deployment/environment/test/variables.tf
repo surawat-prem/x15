@@ -28,7 +28,7 @@ variable "subnets" {
     default = [
         {
             subnet_name = "subnet-k8s"
-            subnet_ip = "10.10.10.0/24"
+            subnet_ip = "10.10.10.0/22"
             subnet_region = "asia-southeast1"
         }
     ]
