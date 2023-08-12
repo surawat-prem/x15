@@ -27,8 +27,18 @@ variable "mtu" {
 variable "subnets" {
     default = [
         {
-            subnet_name = "subnet-k8s"
+            subnet_name = "subnet-k8s-main"
+            subnet_ip = "10.10.0.0/21"
+            subnet_region = "asia-southeast1"
+        },
+        {
+            subnet_name = "subnet-k8s-pods"
             subnet_ip = "10.10.8.0/22"
+            subnet_region = "asia-southeast1"
+        },
+        {
+            subnet_name = "subnet-service"
+            subnet_ip = "10.10.12.0/22"
             subnet_region = "asia-southeast1"
         }
     ]
@@ -55,7 +65,6 @@ variable "gke_enable_horizontal_pod_autoscaling" {
 variable "gke_enable_filestore_csi_driver" {
     default = false
 }
-
 ## NODE POOL
 ### DEFAULT NODE POOL
 variable "gke_default_node_pool_name" {

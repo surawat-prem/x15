@@ -38,8 +38,8 @@ module "kubernetes-engine" {
   zones                      = var.gke_zones
   network                    = var.network_name
   subnetwork                 = var.subnets[0].subnet_name
-  # ip_range_pods              = ""
-  # ip_range_services          = ""
+  ip_range_pods              = var.subnets[1].subnet_name
+  ip_range_services          = var.subnets[2].subnet_name
   http_load_balancing        = var.gke_enable_http_load_balancing
   network_policy             = var.gke_enable_network_policy
   horizontal_pod_autoscaling = var.gke_enable_horizontal_pod_autoscaling
