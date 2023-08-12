@@ -50,6 +50,12 @@ variable "subnets" {
 # END VPC
 
 # GKE
+variable "gke_name" {
+    default = "x15"
+}
+variable "gke_region" {
+    default = "asia-east1"
+}
 variable "gke_zones" {
     default = [
         "asia-east1-a",
