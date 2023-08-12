@@ -1,6 +1,9 @@
 variable "project_id" {
     type = string
 }
+variable "service_account" {
+    type = string
+}
 
 # VPC
 
