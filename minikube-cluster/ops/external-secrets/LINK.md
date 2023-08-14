@@ -1,0 +1,1 @@
+link for GCP Secret Manager: https://external-secrets.io/latest/provider/google-secrets-manager
